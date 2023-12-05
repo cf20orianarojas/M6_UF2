@@ -81,8 +81,11 @@ function metodesArray() {
     let nou = array.flat();
     document.write(`<h3>Array inicial: [[0, 1, 2], [6, 5], [4]] → Mètode flat(): array.flat() → Resultat: ${nou} </h3>`);
 
-    document.write(`<h3> flatMap()</h3>`);
-    // document.write(`<h3> forEach() </h3>`);
+    let paraules = ['Hola', 'Mon', 'JavaScript', 'flatMap'];
+    document.write(`<h3>Array inicial: ['Hola', 'Mon', 'JavaScript', 'flatMap']  array.flatMap() → Resultat: ${paraules.flatMap(paraules => paraules.length)}</h3>`);
+
+    document.write(`<h3> forEach() </h3>`);
+    
     // document.write(`<h3> from() </h3>`);
     // document.write(`<h3> includes() </h3>`);
     // document.write(`<h3> indexOf() </h3>`);
