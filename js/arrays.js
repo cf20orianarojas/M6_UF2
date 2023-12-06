@@ -84,16 +84,28 @@ function metodesArray() {
     let paraules = ['Hola', 'Mon', 'JavaScript', 'flatMap']; // flapMap, recorre les paraules del array y retorna segon la función, la longitud de cada paraula en un nou array
     document.write(`<h3>Array inicial: ['Hola', 'Mon', 'JavaScript', 'flatMap']  → Mètode flatMap(): array.flatMap() → Resultat: ${paraules.flatMap(paraules => paraules.length)}</h3>`);
 
-    document.write(`<h3>Array inicial: [${nouArray}] → Mètode forEach(): frutas.forEach(fruta  => { /*...*/ }); → Resultat: </h3>`);
+    document.write(`<h3>Array: [${nouArray}] → Mètode forEach(): frutas.forEach(fruta  => { /*...*/ }); → Resultat: </h3>`);
     // forEach() itera sobre els elements de un array
     nouArray.forEach(fruta => {
         document.write(`<h3>${fruta}</h3>`);
     });
 
-    // document.write(`<h3> from() </h3>`);
-    // document.write(`<h3> includes() </h3>`);
-    // document.write(`<h3> indexOf() </h3>`);
-    // document.write(`<h3> isArray() </h3>`);
+    // retorna un array de un objete
+    let obj = 'Hola mon!'
+    document.write(`<h3>Objecte inicial: ${obj} → Mètode from() Array.from(obj) → Resultat: [${Array.from(obj)}] </h3>`);
+
+    // El mètode includes determina si un array inclou un determinat, retornant true o false.
+    let inclou = nouArray.includes('😭');
+    document.write(`<h3>Array: [${nouArray}] → Mètode includes(): array.includes('😭') → Resultat: ${inclou} </h3>`);
+
+    // El mètode indexOf trobar la posició d'un element dins d'un array. Si l'element no existeix, retorna -1.
+    let index = nouArray.indexOf(' 🍌');
+    document.write(`<h3>Array: [${nouArray}] → Mètode indexOf(): array.indexOf('🍌') → Resultat: ${index} </h3>`);
+    
+    // Comprova si un objecte és un array
+    let esArray = Array.isArray(noms)
+    document.write(`<h3>Array [${noms}] → Mètode isArray(): Array.isArray(noms) → Resultat: ${esArray} </h3>`);
+
     // document.write(`<h3> join() </h3>`);
     // document.write(`<h3> keys() </h3>`);
     // document.write(`<h3> lastIndexOf() </h3>`);
