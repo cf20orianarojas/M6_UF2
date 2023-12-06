@@ -106,10 +106,25 @@ function metodesArray() {
     let esArray = Array.isArray(noms)
     document.write(`<h3>Array [${noms}] → Mètode isArray(): Array.isArray(noms) → Resultat: ${esArray} </h3>`);
 
-    // document.write(`<h3> join() </h3>`);
-    // document.write(`<h3> keys() </h3>`);
-    // document.write(`<h3> lastIndexOf() </h3>`);
-    // document.write(`<h3> length() </h3>`);
+    // El mètode join() retorna un array com a cadena de text. Es pot especificar qualsevol separador, per defecte és la coma (,).
+    let join = noms.join('...');
+    document.write(`<h3>Array [${noms}] → Mètode join(): array.join('...') → Resultat: ${join} </h3>`);
+
+    // keys() retorna un objeto iterador de Array con las claves de un array
+    let keys = nouEmojis.keys();
+    document.write(`<h3>Array: [${nouEmojis}] → Mètode keys(): → Resultat: </h3>`);
+    for(let key of keys) {
+        document.write(`<h3>Key: ${key}</h3>`);
+    }
+
+    // lastIndexOf() retorna l'últim índex (posició) d'un valor especificat.
+    let fruites = ['poma', 'pinya', 'mango', 'poma', 'maduixa'];
+    let lastIndex = fruites.lastIndexOf('poma');
+    document.write(`<h3>Array: [${fruites}] → Mètode lastIndexOf(): fruites.lastIndexOf('poma') → Resultat: ${lastIndex} </h3>`);
+
+    // length retorna la longitud del array
+    document.write(`<h3>Array: [${fruites}] → Mètode length: fruites.length → Resultat: ${fruites.length} </h3>`);
+
     // document.write(`<h3> map() </h3>`);
     // document.write(`<h3> pop() </h3>`);
     // document.write(`<h3> prototype </h3>`);
