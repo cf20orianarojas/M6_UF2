@@ -105,8 +105,9 @@ function metodesArray() {
 
     // retorna un array de un objete
     let obj = 'Hola mon!';
+    let arrayStr = Array.from(obj);
     document.write(`<h2>Mètode from():</h2>`);
-    document.write(`<h3>Objecte inicial: ${obj} → ex: Array.from(obj) → Resultat: [${Array.from(obj)}] </h3>`);
+    document.write(`<h3>Objecte inicial: ${obj} → ex: Array.from(obj) → Resultat: [${arrayStr}] </h3>`);
 
     // El mètode includes determina si un array inclou un determinat, retornant true o false.
     let inclou = nouArray.includes('😭');
@@ -169,7 +170,7 @@ function metodesArray() {
     // afegeix un nou element al final de l'array 
     document.write(`<h2>Mètode push():</h2>`);
     nouEmojis.push('😭');
-    document.write(`<h3>Array: ['🤖', '😾', '🤡'] → ex: emojis.push('😭') → Resultat: [${nouEmojis}] </h3>`);
+    document.write(`<h3>Array: [🤖, 😾, 🤡] → ex: emojis.push('😭') → Resultat: [${nouEmojis}] </h3>`);
     
     // Redueix els elements de un array a un unic valor
     document.write(`<h2>Mètode reduce():</h2>`);
@@ -179,12 +180,37 @@ function metodesArray() {
     }, 0);
     document.write(`<h3>Array: [${numeros}] → ex: numeros.reduce((count, n) => { return count + n; },0); → Resultat: total ${reduce} </h3>`);
 
-    // document.write(`<h3> → reduceRight() → Resultat:  </h3>`);
-    // document.write(`<h3> → reverse() → Resultat:  </h3>`);
-    // document.write(`<h3> → shift() → Resultat:  </h3>`);
-    // document.write(`<h3> → slice() → Resultat:  </h3>`);
-    // document.write(`<h3> → some() → Resultat:  </h3>`);
-    // document.write(`<h3> → sort() → Resultat:  </h3>`);
+    // recorre els elements del array de dreta a esquerra
+    document.write(`<h2>Mètode reduceRight():</h2>`);
+    let reduceRight = numeros.reduceRight((count, n) => {
+        return count * n; // multiplica de dreta a esquerra
+    }, 1);
+    document.write(`<h3>Array: [${numeros}] → ex: numeros.reduceRight((count, n) => { return count * n; }, 1); → Resultat: total ${reduceRight} </h3>`);
+
+    document.write(`<h2>Mètode reverse():</h2>`);
+    document.write(`<h3>Array: [${arrayStr}] → ex: array.reverse() → Resultat: [${arrayStr.reverse()}] </h3>`);
+
+    // shift() elimina i retorna el primer element del array 
+    document.write(`<h2>Mètode shift():</h2>`);
+    let primerEl = nouEmojis.shift();
+    document.write(`<h3>Array: [🤖,😾,🤡,😭] → ex: array.shift() → Resultat: ${primerEl} nou array: [${nouEmojis}] </h3>`);
+
+    // slice selecciona des d'un inici, fins a un final donat (no inclòs).
+    document.write(`<h2>Mètode slice():</h2>`);
+    let animals = ['🐯', '🦝', '🐱', '🐷', '🐻'];
+    document.write(`<h3>Array: ${animals} → ex: animals.slice(1, 3) → Resultat: ${animals.slice(1,3)} </h3>`);
+
+    // retorna true o false si algú element del array compleix la condició
+    document.write(`<h2>Mètode some():</h2>`);
+    let someFunc = num.some(n => n > 18);
+    document.write(`<h3>Array: [${num}] → ex: num.some(n => n > 18) → Resultat: ${someFunc} </h3>`);
+
+    // ordenarà els números en funció del seu valor com a cadena de text, no del seu valor numèric
+    document.write(`<h2>Mètode sort():</h2>`);
+    // per ordenar de menor a major
+    let sortFunc = num.sort((a, b) =>  a - b);
+    document.write(`<h3>Array: [0, 3, 4, -3, 5, 6, 7, 20, 9] → num.sort((a, b) =>  a - b) → Resultat: [${sortFunc}] </h3>`);
+
     // document.write(`<h3> → splice() → Resultat:  </h3>`);
     // document.write(`<h3> → toString() → Resultat:  </h3>`);
     // document.write(`<h3> → unshift() → Resultat:  </h3>`);
