@@ -211,8 +211,22 @@ function metodesArray() {
     let sortFunc = num.sort((a, b) =>  a - b);
     document.write(`<h3>Array: [0, 3, 4, -3, 5, 6, 7, 20, 9] → num.sort((a, b) =>  a - b) → Resultat: [${sortFunc}] </h3>`);
 
-    // document.write(`<h3> → splice() → Resultat:  </h3>`);
-    // document.write(`<h3> → toString() → Resultat:  </h3>`);
-    // document.write(`<h3> → unshift() → Resultat:  </h3>`);
-    // document.write(`<h3> → valueOf() → Resultat:  </h3>`);
+    // afegeix o elimina elements del array
+    document.write(`<h2>Mètode splice():</h2>`);
+    document.write(`<h3>Array: [${animals}] → ex: animals.splice(1,2) → Resultat: [${animals.splice(1,2)}] </h3>`);
+    
+    // retorna un string amb els valors del array separats per comes
+    document.write(`<h2>Mètode toString():</h2>`);
+    let nomsStr = noms.toString().toLowerCase();
+    document.write(`<h3>Array: [${noms}] → noms.toString().toLowerCase() → Resultat: ${nomsStr} </h3>`);
+
+    // Afegeix un element al principi del array, el mateix que push pero al principi
+    document.write(`<h2>Mètode unshift():</h2>`);
+    noms.unshift('oriana');
+    document.write(`<h3>Array: [ANA, JUANMA, MARIA, ALBA] → ex: noms.unshift('oriana') → Resultat: [${noms}] </h3>`);
+
+    // el mètode retorna mateix el array 
+    document.write(`<h2>Mètode valueOf():</h2>`);
+    let value = num.valueOf();
+    document.write(`<h3>Array: [${num}] → ex: num.valueOf() → Resultat: [${value}] </h3>`);
 }
